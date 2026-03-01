@@ -97,7 +97,7 @@ def chatbot():
         #     session['chat_history'] = history
     
     # return render_template('chatbot.html', chat_history=session['chat_history'])
-    return redirect('https://6dadfe40205b5beebf.gradio.live/')
+    return redirect('https://huggingface.co/spaces/praveen88533/Mental_Health_Chatbot')
 
 @app.route('/chatbot/clear')
 def clear_chat():
