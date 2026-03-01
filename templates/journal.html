@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="margin-bottom: 30px;">
+    <h2>Personal Journal</h2>
+    <p>Writing down your thoughts can help process emotions and reduce stress. Your entries are stored locally and are
+        private.</p>
+</div>
+
+<section class="journal-form card">
+    <h3>New Entry</h3>
+    <form action="{{ url_for('journal') }}" method="POST">
+        <textarea name="content" placeholder="How are you feeling today?" required></textarea>
+        <button type="submit" class="btn btn-primary">Save Entry</button>
+    </form>
+</section>
+
+<div class="journal-list">
+    <h3>Previous Entries</h3>
+    {% if entries %}
+    {% for entry in entries %}
+    <div class="journal-entry">
+        <div class="date">{{ entry.created_at.strftime('%B %d, %Y at %H:%M') }}</div>
+        <div class="content">{{ entry.content }}</div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p style="color: #888; margin-top: 20px;">No entries yet. Start writing your first thought today.</p>
+    {% endif %}
+</div>
+{% endblock %}

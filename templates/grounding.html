@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="margin-bottom: 30px;">
+    <h2>5-4-3-2-1 Grounding Technique</h2>
+    <p>This grounding exercise helps you focus on the present by engaging your five senses. It's particularly helpful
+        for anxiety and panic.</p>
+</div>
+
+<div class="grounding-list">
+    <div class="grounding-step card">
+        <div class="step-num">5</div>
+        <div>
+            <strong>THINGS YOU CAN SEE</strong>
+            <p>Look around you and name five objects. A chair, a tree, a speck of dust, anything.</p>
+        </div>
+    </div>
+
+    <div class="grounding-step card">
+        <div class="step-num">4</div>
+        <div>
+            <strong>THINGS YOU CAN TOUCH</strong>
+            <p>Acknowledge four things you can feel. The fabric of your clothes, the surface of your desk, or the wind
+                on your face.</p>
+        </div>
+    </div>
+
+    <div class="grounding-step card">
+        <div class="step-num">3</div>
+        <div>
+            <strong>THINGS YOU CAN HEAR</strong>
+            <p>Listen for three distinct sounds. The hum of a computer, birds chirping outside, or your own breath.</p>
+        </div>
+    </div>
+
+    <div class="grounding-step card">
+        <div class="step-num">2</div>
+        <div>
+            <strong>THINGS YOU CAN SMELL</strong>
+            <p>Notice two smells. It could be the scent of your coffee, or just the smell of the air in the room.</p>
+        </div>
+    </div>
+
+    <div class="grounding-step card">
+        <div class="step-num">1</div>
+        <div>
+            <strong>THING YOU CAN TASTE</strong>
+            <p>Focus on one thing you can taste. This could be a lingering taste from a meal or even just the inside of
+                your mouth.</p>
+        </div>
+    </div>
+</div>
+
+<div style="margin-top: 30px; text-align: center;">
+    <a href="{{ url_for('techniques') }}" class="btn btn-primary">Done</a>
+</div>
+{% endblock %}

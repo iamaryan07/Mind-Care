@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card" style="padding: 50px;">
+    <h1 style="color: var(--primary-color); margin-bottom: 20px;">About Mind Care</h1>
+
+    <p style="font-size: 1.1rem; margin-bottom: 20px;">
+        Mind Care is a privacy-focused mental health support platform designed to provide immediate, supportive tools
+        for anyone experiencing emotional distress, anxiety, or stress.
+    </p>
+
+    <h3 style="margin-top: 30px; margin-bottom: 10px;">Our Mission</h3>
+    <p>
+        We believe that mental health tools should be accessible to everyone, without barriers. Our goal is to provide a
+        calm, safe digital environment where users can practice mindfulness, journal their thoughts, and find helpful
+        resources.
+    </p>
+
+    <h3 style="margin-top: 30px; margin-bottom: 10px;">Privacy First</h3>
+    <p>
+        Mind Care runs locally on your machine. Your journal entries and chat history are stored in a local database and
+        session, meaning your data stays with you.
+    </p>
+
+    <h3 style="margin-top: 30px; margin-bottom: 10px;">Important Note</h3>
+    <p>
+        Mind Care is an AI-powered support tool and is **not** a replacement for professional therapy or medical
+        intervention. If you are experiencing a mental health emergency, please contact professional services
+        immediately.
+    </p>
+
+    <h3 style="margin-top: 30px; margin-bottom: 10px;">Created By:</h3>
+    <p>
+        Aryan (009)
+        <br>
+        Daksh Kapoor (018)
+        <br>
+        Praveen Singh (032)
+        <br>
+        Jaivardhan Singh (049)
+        <br>
+        Daksh Garg (052)
+        <br>
+        Farhan (067)
+    </p>
+
+    <div style="margin-top: 40px;">
+        <a href="{{ url_for('index') }}" class="btn btn-primary">Back Home</a>
+    </div>
+</div>
+{% endblock %}

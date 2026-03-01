@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="text-align: center; margin-bottom: 20px;">
+    <h2>Guided Breathing (4-7-8)</h2>
+    <p>Follow the expanding and contracting circle to guide your breath. <br>
+        <strong>Inhale (4s)</strong>, <strong>Hold (7s)</strong>, <strong>Exhale (8s)</strong>.
+    </p>
+</div>
+
+<div class="card breathing-box">
+    <div class="circle-container" id="breathing-circle">
+        <div class="circle"></div>
+        <div class="breath-text"></div>
+    </div>
+    <div class="breath-instructions"></div>
+</div>
+
+<div style="margin-top: 30px;">
+    <h3>How it works</h3>
+    <p>The 4-7-8 breathing technique, also known as "Relaxing Breath," has its roots in Pranayama yoga. It helps you
+        gain control over your breath and can move your nervous system from "fight or flight" to "rest and digest."</p>
+    <a href="{{ url_for('techniques') }}" class="btn"
+        style="display: inline-block; margin-top: 20px; border: 1px solid var(--primary-color);">Back to Techniques</a>
+</div>
+{% endblock %}

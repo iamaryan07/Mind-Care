@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Care - Mental Health Support</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('index') }}" class="logo">
+                <span>🍃</span> Mind Care
+            </a>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('chatbot') }}">Chatbot</a></li>
+                <li><a href="{{ url_for('journal') }}">Journal</a></li>
+                <li><a href="{{ url_for('techniques') }}">Techniques</a></li>
+                <li><a href="{{ url_for('resources') }}">Resources</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="crisis-banner">
+            <strong>Need urgent help?</strong> If you are in immediate danger or feeling suicidal, please contact a
+            crisis line or emergency services.
+            <a href="{{ url_for('resources') }}">View Hotlines</a>
+        </div>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        <div class="alert alert-{{ category }}"
+            style="padding: 10px; margin-bottom: 20px; border-radius: 8px; background: #e3f2fd; color: #0d47a1;">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        <main id="main-content">
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Mind Care Platform. Committed to your mental well-being.</p>
+        <p><small>Disclaimer: This platform is not a substitute for professional medical advice, diagnosis, or
+                treatment.</small></p>
+    </footer>
+</body>
+
+</html>

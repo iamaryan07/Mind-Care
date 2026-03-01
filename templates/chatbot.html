@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="margin-bottom: 20px;">
+    <h2>Supportive Chatbot</h2>
+    <p>I'm here to listen and help you find coping strategies. I am not a medical professional, but I can offer
+        supportive techniques.</p>
+</div>
+
+<div class="chat-container">
+    <div class="chat-history">
+        {% for msg in chat_history %}
+        <div class="message {{ 'user-message' if msg.role == 'user' else 'bot-message' }}">
+            {{ msg.content }}
+        </div>
+        {% endfor %}
+        <div id="bottom"></div>
+    </div>
+
+    <form class="chat-input-form" action="{{ url_for('chatbot') }}" method="POST">
+        <input type="text" name="message" placeholder="Type your message here..." required autofocus autocomplete="off">
+        <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+</div>
+
+<div style="margin-top: 20px; text-align: right;">
+    <a href="{{ url_for('clear_chat') }}" style="color: #888; text-decoration: none; font-size: 0.9rem;">Clear
+        Conversation History</a>
+</div>
+{% endblock %}

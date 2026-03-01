@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="margin-bottom: 40px; text-align: center;">
+    <h2>Coping Techniques</h2>
+    <p>Simple tools to help you manage difficult emotions in the moment.</p>
+</div>
+
+<div class="grid">
+    <a href="{{ url_for('breathing') }}" class="card">
+        <h3>Guided Breathing</h3>
+        <p>The 4-7-8 technique is a biological trick to help your body relax. Follow the animation to synchronize your
+            breath.</p>
+        <span style="margin-top:20px; color: var(--accent-color); font-weight: bold;">Start Exercise &rarr;</span>
+    </a>
+
+    <a href="{{ url_for('grounding') }}" class="card">
+        <h3>5-4-3-2-1 Grounding</h3>
+        <p>A technique to bring your focus back to the present when you feel overwhelmed or panicked.</p>
+        <span style="margin-top:20px; color: var(--accent-color); font-weight: bold;">Learn Technique &rarr;</span>
+    </a>
+</div>
+
+<div class="card" style="margin-top: 40px;">
+    <h3>Other Quick Tips</h3>
+    <ul style="padding-left: 20px; margin-top: 15px;">
+        <li><strong>Physical Movement:</strong> Even a 5-minute walk can change your perspective.</li>
+        <li><strong>Hydration:</strong> Sometimes a glass of cold water can help interrupt a spiral.</li>
+        <li><strong>Naming Emotions:</strong> Saying "I am feeling [emotion]" can help reduce its power.</li>
+        <li><strong>Music:</strong> Create a playlist of songs that make you feel safe or calm.</li>
+    </ul>
+</div>
+{% endblock %}
