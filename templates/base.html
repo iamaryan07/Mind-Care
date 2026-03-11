@@ -15,7 +15,8 @@
     <header>
         <nav>
             <a href="{{ url_for('index') }}" class="logo">
-                <span>🍃</span> Mind Care
+                {% comment %} <span>🍃</span> Mind Care {% endcomment %}
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Mind Care Logo">
             </a>
             <ul class="nav-links">
                 <li><a href="{{ url_for('index') }}">Home</a></li>
